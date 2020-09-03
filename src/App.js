@@ -165,31 +165,53 @@ class Poem extends React.Component {
     this.state = {
 
     }
+    this.video = React.createRef();
+  }
+
+  scrollToPlay() {
+    // Use requestAnimationFrame for smooth playback
+    
+    // var frameNumber  = 500;
+    // vid.currentTime  = frameNumber;
+    // window.requestAnimationFrame(scrollPlay);
+
   }
 
   render() {
 
     return (
-      <div className="poem">
+
+      <div id="poem-container">
         <header id="header">
-          <h1>The Song of the Wandering Aengus</h1>
-          <h2>by William Butler Yeats</h2>
-          <h3>An web-based ode to a beautiful poem</h3>
+          <div className="intro-wrapper">
+            <h1>The Song of the Wandering Aengus</h1>
+            <h2>by William Butler Yeats</h2>
+            <h3>A web-based ode to a beautiful poem</h3>
+          </div>
         </header>
-        <div id="lines-container">
-          {poemSections.map((section, index) => (
-            <section className="line-section">
-              <h4 className="line">{section.line}</h4>
-              {/*<PoemImages*/}
-              {/*  images={section.images}*/}
-              {/*  index={index}*/}
-              {/*  />*/}
-              {section.images.map((image, imageIndex) => (
-                <img className={`image image-${imageIndex}`} src={`/images/${index}/${image}.jpg`}/>
-              ))}
-            </section>
-          ))}
+        <div id="video-container">
+          <div className="video-wrapper">
+            <video ref={this.video} id="video" playsinline width="1000" src="/video/wandering-aengus-video-small.mp4">
+              Sorry, your browser doesn't support embedded videos.
+            </video>
+          </div>
+          <div id="lines-container" onScroll={this.scrollToPlay}>
+            {poemSections.map((section, index) => (
+              <section className="line-section">
+                <h4 className="line">{section.line}</h4>
+                {/*<PoemImages*/}
+                {/*  images={section.images}*/}
+                {/*  index={index}*/}
+                {/*  />*/}
+                {/*{section.images.map((image, imageIndex) => (*/}
+                {/*  <img className={`image image-${imageIndex}`} src={`/images/${index}/${image}.jpg`}/>*/}
+                {/*))}*/}
+              </section>
+            ))}
+
+          </div>
         </div>
+
       </div>
     );
   }
