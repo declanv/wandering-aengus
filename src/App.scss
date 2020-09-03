@@ -68,6 +68,38 @@
     overflow: scroll;
     scroll-snap-type: y mandatory;
 
+    .image-container {
+      position: absolute;
+      display: block;
+      overflow: scroll;
+      height: 100vh;
+      .image {
+        position: relative;
+        display: block;
+        height: 100%;
+        width: auto;
+
+        &.after {
+          position: absolute;
+          display: block;
+          height: 100%;
+          width: auto;
+          box-shadow: inset 0 1px 10px 20px #57913A;
+          content: '';
+        }
+
+        @for $i from 1 through 10 {
+          .image-#{$i} {
+            z-index: $i;
+
+            &.after {
+              z-index: #{$i+1};
+            }
+          }
+        }
+      }
+    }
+
 
     .line-section {
       position: relative;
@@ -98,31 +130,9 @@
         margin: 0 auto;
       }
 
-      .image {
-        position: absolute;
-        display: block;
-        height: 100%;
-        width: auto;
 
-        &.after {
-          position: absolute;
-          display: block;
-          height: 100%;
-          width: auto;
-          box-shadow: inset 0 1px 10px 20px #57913A;
-          content: '';
-        }
 
-        @for $i from 1 through 10 {
-          .image-#{$i} {
-            z-index: $i;
 
-            &.after {
-              z-index: #{$i+1};
-            }
-          }
-        }
-      }
     }
 
   }
