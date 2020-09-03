@@ -170,7 +170,7 @@ class Poem extends React.Component {
 
   scrollToPlay() {
     // Use requestAnimationFrame for smooth playback
-    
+
     // var frameNumber  = 500;
     // vid.currentTime  = frameNumber;
     // window.requestAnimationFrame(scrollPlay);
@@ -189,12 +189,12 @@ class Poem extends React.Component {
             <h3>A web-based ode to a beautiful poem</h3>
           </div>
         </header>
-        <div id="video-container">
-          <div className="video-wrapper">
-            <video ref={this.video} id="video" playsinline width="1000" src="/video/wandering-aengus-video-small.mp4">
-              Sorry, your browser doesn't support embedded videos.
-            </video>
-          </div>
+        <div id="lines-imagery-container">
+          {/*<div className="video-wrapper">*/}
+          {/*  <video ref={this.video} id="video" playsinline width="1000" src="/video/wandering-aengus-video-small.mp4">*/}
+          {/*    Sorry, your browser doesn't support embedded videos.*/}
+          {/*  </video>*/}
+          {/*</div>*/}
           <div id="lines-container" onScroll={this.scrollToPlay}>
             {poemSections.map((section, index) => (
               <section className="line-section">
@@ -203,9 +203,9 @@ class Poem extends React.Component {
                 {/*  images={section.images}*/}
                 {/*  index={index}*/}
                 {/*  />*/}
-                {/*{section.images.map((image, imageIndex) => (*/}
-                {/*  <img className={`image image-${imageIndex}`} src={`/images/${index}/${image}.jpg`}/>*/}
-                {/*))}*/}
+                {section.images.map((image, imageIndex) => (
+                  <img className={`image image-${imageIndex}`} src={`/images/${index}/${image}.jpg`}/>
+                ))}
               </section>
             ))}
 
