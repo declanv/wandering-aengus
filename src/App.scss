@@ -66,6 +66,8 @@
     background: transparent;
     height: 100vh;
     overflow: scroll;
+    scroll-snap-type: y mandatory;
+
 
     .line-section {
       position: relative;
@@ -76,6 +78,7 @@
       align-content: center;
       justify-content: center;
       background: transparent;
+      scroll-snap-align: center;
 
       //background-color: #57913A;
 
