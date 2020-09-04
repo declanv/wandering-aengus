@@ -146,22 +146,37 @@ html, body {
   height: 100vh;
 }
 
-#poem-container {
+#app {
   position: relative;
   display: block;
-  height: 100vh;
-  overflow: scroll;
-  overflow-y: scroll;
-
-
-
-}
-
-#image-container {
-  .image {
-    position: absolute;
+  #poem-container {
+    position: relative;
     display: block;
     height: 100vh;
-
+    overflow: scroll;
+    overflow-y: scroll;
+    z-index: 11;
+    //::-webkit-scrollbar {
+    //  display: none;
+    //}
   }
+
+  .image-container {
+    position: absolute;
+    display: block;
+    z-index: 10;
+    top: 0;
+    .image {
+      position: absolute;
+      display: block;
+      height: 100vh;
+      z-index: -1;
+
+      &.top-image {
+        z-index: 10;
+      }
+    }
+  }
+
 }
+

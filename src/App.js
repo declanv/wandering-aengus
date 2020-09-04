@@ -175,16 +175,11 @@ class Poem extends React.Component {
     console.log('something')
 
     console.log(this.imageContainer.current.scrollTop, "window pageYOffset")
-    // Use requestAnimationFrame for smooth playback
 
-    // var frameNumber  = 500;
-    // vid.currentTime  = frameNumber;
-    // window.requestAnimationFrame(scrollPlay);
-    let currentScrollPosition = this.imageContainer.current.scrollTop;
-    let oneImageScrollDistance = this.imageContainer.current.scrollHeight / this.imageNumber;
+    let oneImageScrollDistance = window.innerHeight;
     let shownImage = this.imageContainer.current.scrollTop/oneImageScrollDistance;
     this.setState({
-      shownImage : Math.ceil(shownImage)
+      shownImage : Math.ceil(shownImage)+1
     })
     console.log(this.state.shownImage)
   }
@@ -194,10 +189,15 @@ class Poem extends React.Component {
   render() {
 
     let images = [];
+    let topImage = this.imageNumber
     for (var i = 1; i < this.imageNumber+1; i++) {
+      let topImage = this.state.shownImage === i ? 'top-image' : '';
+      console.log('top image', topImage)
+      console.log('shown image', this.state.shownImage)
+      console.log('i', i)
       // note: we add a key prop here to allow react to uniquely identify each
       // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
-      images.push(<img className={`image image-${i}`} src={`/images/${i}.jpg`}/>
+      images.push(<img className={`image image-${i} ${topImage}`} src={`/images/${i}.jpg`}/>
       );
     }
 
