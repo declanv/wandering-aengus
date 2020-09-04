@@ -171,17 +171,11 @@ class Poem extends React.Component {
   }
 
   scrollToScrub = e => {
-
-    console.log('something')
-
-    console.log(this.imageContainer.current.scrollTop, "window pageYOffset")
-
     let oneImageScrollDistance = window.innerHeight;
     let shownImage = this.imageContainer.current.scrollTop/oneImageScrollDistance;
     this.setState({
       shownImage : Math.ceil(shownImage)+1
     })
-    console.log(this.state.shownImage)
   }
 
 
@@ -192,11 +186,6 @@ class Poem extends React.Component {
     let topImage = this.imageNumber
     for (var i = 1; i < this.imageNumber+1; i++) {
       let topImage = this.state.shownImage === i ? 'top-image' : '';
-      console.log('top image', topImage)
-      console.log('shown image', this.state.shownImage)
-      console.log('i', i)
-      // note: we add a key prop here to allow react to uniquely identify each
-      // element in this array. see: https://reactjs.org/docs/lists-and-keys.html
       images.push(<img className={`image image-${i} ${topImage}`} src={`/images/${i}.jpg`}/>
       );
     }
@@ -207,7 +196,6 @@ class Poem extends React.Component {
         <div id="poem-container" ref={this.imageContainer} onScroll={this.scrollToScrub} >
           <div className="set-height"  style={{height: this.imageNumber * window.innerHeight + 'px'}}>
           </div>
-
         </div>
         <div className="image-container">
           <div className="image-wrapper">
