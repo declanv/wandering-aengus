@@ -210,7 +210,9 @@ class Poem extends React.Component {
 
         </div>
         <div className="image-container">
-          {images}
+          <div className="image-wrapper">
+            {images}
+          </div>
         </div>
       </div>
     );
