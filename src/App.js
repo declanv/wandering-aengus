@@ -172,7 +172,9 @@ class Poem extends React.Component {
 
   scrollToScrub = e => {
 
-    console.log(this.imageContainer.current.scrollTop)
+    console.log('something')
+
+    console.log(this.imageContainer.current.scrollTop, "window pageYOffset")
     // Use requestAnimationFrame for smooth playback
 
     // var frameNumber  = 500;
@@ -201,43 +203,15 @@ class Poem extends React.Component {
 
     return (
 
-      <div id="poem-container">
-        <header id="header">
-          <div className="intro-wrapper">
-            <h1>The Song of the Wandering Aengus</h1>
-            <h2>by William Butler Yeats</h2>
-            <h3>A web-based ode to a beautiful poem</h3>
+      <div id="app">
+        <div id="poem-container" ref={this.imageContainer} onScroll={this.scrollToScrub} >
+          <div className="set-height"  style={{height: this.imageNumber * window.innerHeight + 'px'}}>
           </div>
-        </header>
-        <div id="lines-imagery-container">
-          {/*<div className="video-wrapper">*/}
-          {/*  <video ref={this.video} id="video" playsinline width="1000" src="/video/wandering-aengus-video-small.mp4">*/}
-          {/*    Sorry, your browser doesn't support embedded videos.*/}
-          {/*  </video>*/}
-          {/*</div>*/}
-          <div id="lines-container" onScroll={this.scrollToScrub}>
-            <div className="image-container" ref={this.imageContainer}>
-              {images}
-            </div>
 
-            {/*{poemSections.map((section, index) => (*/}
-            {/*  <section className="line-section">*/}
-            {/*    <h4 className="line">{section.line}</h4>*/}
-            {/*    /!*<PoemImages*!/*/}
-            {/*    /!*  images={section.images}*!/*/}
-            {/*    /!*  index={index}*!/*/}
-            {/*    /!*  />*!/*/}
-            {/*    <div className="image-container">*/}
-            {/*      {section.images.map((image, imageIndex) => (*/}
-            {/*        <img className={`image image-${imageIndex}`} src={`/images/${index}/${image}.jpg`}/>*/}
-            {/*      ))}*/}
-            {/*    </div>*/}
-            {/*  </section>*/}
-            {/*))}*/}
-
-          </div>
         </div>
-
+        <div className="image-container">
+          {images}
+        </div>
       </div>
     );
   }
