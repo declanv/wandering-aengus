@@ -3,123 +3,31 @@ import React from 'react';
 import './App.scss';
 
 
-const poemSections = [
-  { 'line' : "I went out to the hazel wood,",
-    'images' : [1,2,3,4,5,6,7,8]
-  },
-  { 'line' : "Because a fire was in my head,",
-    'images' : [9,10,11,12,13]
-  },
-  { 'line' : "And cut and peeled a hazel wand,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And hooked a berry to a thread;",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And when white moths were on the wing,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And moth-like stars were flickering out,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "I dropped the berry in a stream",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And caught a little silver trout.",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "When I had laid it on the floor",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "I went to blow the fire a-flame,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "But something rustled on the floor,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And someone called me by my name:",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "It had become a glimmering girl",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "With apple blossom in her hair",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "Who called me by my name and ran",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And faded through the brightening air.",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "Though I am old with wandering",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "Through hollow lands and hilly lands,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "I will find out where she has gone,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And kiss her lips and take her hands;",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And walk among long dappled grass,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "And pluck till time and times are done,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "The silver apples of the moon,",
-    'images' : [
-
-    ]
-  },
-  { 'line' : "The golden apples of the sun.",
-    'images' : [
-
-    ]
-  },
+const lines = [
+  'I went out to the hazel wood,',
+  'Because a fire was in my head,',
+  'And cut and peeled a hazel wand,',
+  'And hooked a berry to a thread;',
+  'And when white moths were on the wing,',
+  'And moth-like stars were flickering out,',
+  'I dropped the berry in a stream',
+  'And caught a little silver trout.',
+  'When I had laid it on the floor',
+  'I went to blow the fire a-flame,',
+  'But something rustled on the floor,',
+  'And someone called me by my name:',
+  'It had become a glimmering girl',
+  'With apple blossom in her hair',
+  'Who called me by my name and ran',
+  'And faded through the brightening air.',
+  'Though I am old with wandering',
+  'Through hollow lands and hilly lands,',
+  'I will find out where she has gone,',
+  'And kiss her lips and take her hands;',
+  'And walk among long dappled grass,',
+  'And pluck till time and times are done,',
+  'The silver apples of the moon,',
+  'The golden apples of the sun.'
 ];
 
 // class PoemSection extends React.Component {
