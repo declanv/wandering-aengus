@@ -30,48 +30,6 @@ const lines = new Map([
   [160, 'The golden apples of the sun.'],
 ])
 
-
-
-
-
-// class PoemSection extends React.Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//
-//     }
-//   }
-//   render() {
-//
-//   }
-// }
-
-function PoemSection(props) {
-
-  return (
-    <section className="line-section">
-      <h4 className="line">{props.section.line}</h4>
-      {/*section.images.map( image => (*/}
-      {/*  <img src={index + image} />*/}
-      {/*))}*/}
-    </section>
-  )
-}
-
-class PoemImages extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {}
-  }
-
-  render() {
-    return (
-      <img />
-    );
-  }
-
-}
-
 class Poem extends React.Component {
   constructor(props) {
     super(props);
@@ -90,11 +48,8 @@ class Poem extends React.Component {
       shownImage : Math.ceil(shownImage)+1
     })
 
-  //  use has method to access array keys
   }
-
-
-
+  
   render() {
 
     let images = [];
@@ -105,10 +60,8 @@ class Poem extends React.Component {
       );
     }
 
+    // ultimately, this should probably be changed to a conditional to trigger the animation of the text in
     let shownLine = lines.get(this.state.shownImage);
-    console.log('shownLine', shownLine);
-    console.log('this.state.shownImage', this.state.shownImage);
-    // debugger;
 
     return (
 
