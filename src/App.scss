@@ -149,6 +149,7 @@ html, body {
 #app {
   position: relative;
   display: block;
+
   #poem-container {
     position: relative;
     display: block;
@@ -159,6 +160,31 @@ html, body {
     //::-webkit-scrollbar {
     //  display: none;
     //}
+  }
+
+  .line-container {
+    position: absolute;
+    display: flex;
+    z-index: 20;
+    //height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+
+    .line-wrapper {
+      position: relative;
+      display: flex;
+      flex: 0 1 auto;
+
+      .line {
+        position: relative;
+        display: block;
+        text-align: center;
+        background-color: white;
+      }
+    }
   }
 
   .image-container {
