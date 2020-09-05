@@ -49,14 +49,13 @@ class Poem extends React.Component {
     })
 
   }
-  
+
   render() {
 
     let images = [];
-    let topImage = this.imageNumber
     for (var i = 1; i < this.imageNumber+1; i++) {
       let topImage = this.state.shownImage === i ? 'top-image' : '';
-      images.push(<img className={`image image-${i} ${topImage}`} src={`/images/${i}.jpg`}/>
+      images.push(<img key={i} className={`image image-${i} ${topImage}`} src={`/images/${i}.jpg`}/>
       );
     }
 
