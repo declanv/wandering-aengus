@@ -67,6 +67,13 @@ class Poem extends React.Component {
       <div id="app">
         <div id="poem-container" ref={this.imageContainer} onScroll={this.scrollToScrub} >
           <div className="set-height"  style={{height: this.imageNumber * window.innerHeight + 'px'}}>
+            <div className="intro-header">
+              <div className="intro-wrapper">
+                <h1>The Song of the Wandering Aengus</h1>
+                <h2>By William Butler Yeats</h2>
+                <h3>A digital ode to a beautiful poem</h3>
+              </div>
+            </div>
           </div>
         </div>
         <div className="line-container">
