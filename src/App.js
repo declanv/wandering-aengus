@@ -68,6 +68,16 @@ class Poem extends React.Component {
         <div id="poem-container" ref={this.imageContainer} onScroll={this.scrollToScrub} >
           <div className="set-height"  style={{height: this.imageNumber * window.innerHeight + 'px'}}>
             <div className="intro-header">
+              <div className="intro-parallax">
+                <img className="intro-image" src="/images/intro/8.png" />
+                <img className="intro-image" src="/images/intro/7.png" />
+                <img className="intro-image" src="/images/intro/6.png" />
+                <img className="intro-image" src="/images/intro/5.png" />
+                <img className="intro-image" src="/images/intro/4.png" />
+                <img className="intro-image" src="/images/intro/3.png" />
+                <img className="intro-image" src="/images/intro/2.png" />
+                <img className="intro-image" src="/images/intro/1.png" />
+              </div>
               <div className="intro-wrapper">
                 <h1>The Song of the Wandering Aengus</h1>
                 <h2>By William Butler Yeats</h2>
