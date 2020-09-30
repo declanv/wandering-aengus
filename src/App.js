@@ -9,7 +9,7 @@ import intro5 from './assets/img/intro/intro-5.png';
 import intro6 from './assets/img/intro/intro-6.png';
 import intro7 from './assets/img/intro/intro-7.png';
 import intro8 from './assets/img/intro/intro-8.png';
-
+import {Parallax, ParallaxLayer} from 'react-spring/renderprops-addons'
 
 const lines = new Map([
   [8, 'I went out to the hazel wood,'],
@@ -76,21 +76,21 @@ class Poem extends React.Component {
         <div id="poem-container" ref={this.imageContainer} onScroll={this.scrollToScrub} >
           <div className="set-height"  style={{height: this.imageNumber * window.innerHeight + 'px'}}>
             <div className="intro-header">
-              <div className="intro-parallax">
-                <img className="intro-image 1" src={intro1} />
-                <img className="intro-image 2" src={intro2} />
-                <img className="intro-image 3" src={intro3} />
-                <img className="intro-image 4" src={intro4} />
-                <img className="intro-image 5" src={intro5} />
-                <img className="intro-image 6" src={intro6} />
-                <img className="intro-image 7" src={intro7} />
-                <img className="intro-image 8" src={intro8} />
-              </div>
-              <div className="intro-wrapper">
-                <h1>The Song of the Wandering Aengus</h1>
-                <h2>By William Butler Yeats</h2>
-                <h3>A digital ode to a beautiful poem</h3>
-              </div>
+              <Parallax pages={1.25} ref={ref => (this.parallax = ref)} className="intro-parallax">
+                <ParallaxLayer speed={0.1}><img className="intro-image 1" src={intro1} /></ParallaxLayer>
+                <ParallaxLayer speed={0.2}><img className="intro-image 2" src={intro2} /></ParallaxLayer>
+                <ParallaxLayer speed={0.3}><img className="intro-image 3" src={intro3} /></ParallaxLayer>
+                <ParallaxLayer speed={0.4}><img className="intro-image 4" src={intro4} /></ParallaxLayer>
+                <ParallaxLayer speed={0.5}><img className="intro-image 5" src={intro5} /></ParallaxLayer>
+                <ParallaxLayer speed={0.6}><img className="intro-image 6" src={intro6} /></ParallaxLayer>
+                <ParallaxLayer speed={0.7}><img className="intro-image 7" src={intro7} /></ParallaxLayer>
+                <ParallaxLayer speed={0.8}><img className="intro-image 8" src={intro8} /></ParallaxLayer>
+              </Parallax>
+              {/*<div className="intro-wrapper">*/}
+              {/*  <h1>The Song of the Wandering Aengus</h1>*/}
+              {/*  <h2>By William Butler Yeats</h2>*/}
+              {/*  <h3>A digital ode to a beautiful poem</h3>*/}
+              {/*</div>*/}
             </div>
           </div>
         </div>
