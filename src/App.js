@@ -1,6 +1,14 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.scss';
+import intro1 from './assets/img/intro/intro-1.png';
+import intro2 from './assets/img/intro/intro-2.png';
+import intro3 from './assets/img/intro/intro-3.png';
+import intro4 from './assets/img/intro/intro-4.png';
+import intro5 from './assets/img/intro/intro-5.png';
+import intro6 from './assets/img/intro/intro-6.png';
+import intro7 from './assets/img/intro/intro-7.png';
+import intro8 from './assets/img/intro/intro-8.png';
 
 
 const lines = new Map([
@@ -55,7 +63,7 @@ class Poem extends React.Component {
     let images = [];
     for (var i = 1; i < this.imageNumber+1; i++) {
       let topImage = this.state.shownImage === i ? 'top-image' : '';
-      images.push(<img key={i} className={`image image-${i} ${topImage}`} src={`/images/${i}.jpg`}/>
+      images.push(<img key={i} className={`image image-${i} ${topImage}`} src={`/img/${i}.jpg`}/>
       );
     }
 
@@ -69,14 +77,14 @@ class Poem extends React.Component {
           <div className="set-height"  style={{height: this.imageNumber * window.innerHeight + 'px'}}>
             <div className="intro-header">
               <div className="intro-parallax">
-                <img className="intro-image" src="/images/intro/8.png" />
-                <img className="intro-image" src="/images/intro/7.png" />
-                <img className="intro-image" src="/images/intro/6.png" />
-                <img className="intro-image" src="/images/intro/5.png" />
-                <img className="intro-image" src="/images/intro/4.png" />
-                <img className="intro-image" src="/images/intro/3.png" />
-                <img className="intro-image" src="/images/intro/2.png" />
-                <img className="intro-image" src="/images/intro/1.png" />
+                <img className="intro-image 1" src={intro1} />
+                <img className="intro-image 2" src={intro2} />
+                <img className="intro-image 3" src={intro3} />
+                <img className="intro-image 4" src={intro4} />
+                <img className="intro-image 5" src={intro5} />
+                <img className="intro-image 6" src={intro6} />
+                <img className="intro-image 7" src={intro7} />
+                <img className="intro-image 8" src={intro8} />
               </div>
               <div className="intro-wrapper">
                 <h1>The Song of the Wandering Aengus</h1>

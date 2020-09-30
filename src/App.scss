@@ -158,6 +158,16 @@ html, body {
       background-color: white;
       flex-direction: column;
       justify-content: center;
+
+      .intro-parallax {
+        position: relative;
+        display: block;
+        .intro-image {
+          position: absolute;
+          display: block;
+          width: 100%;
+        }
+      }
       .intro-wrapper {
         position: relative;
         display: flex;
