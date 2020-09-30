@@ -80,11 +80,11 @@ class Poem extends React.Component {
                 <ParallaxLayer speed={0.1}><img className="intro-image 1" src={intro1} /></ParallaxLayer>
                 <ParallaxLayer speed={0.2}><img className="intro-image 2" src={intro2} /></ParallaxLayer>
                 <ParallaxLayer speed={0.3}><img className="intro-image 3" src={intro3} /></ParallaxLayer>
-                <ParallaxLayer speed={0.4}><img className="intro-image 4" src={intro4} /></ParallaxLayer>
-                <ParallaxLayer speed={0.5}><img className="intro-image 5" src={intro5} /></ParallaxLayer>
-                <ParallaxLayer speed={0.6}><img className="intro-image 6" src={intro6} /></ParallaxLayer>
-                <ParallaxLayer speed={0.7}><img className="intro-image 7" src={intro7} /></ParallaxLayer>
-                <ParallaxLayer speed={0.8}><img className="intro-image 8" src={intro8} /></ParallaxLayer>
+                <ParallaxLayer speed={0.5}><img className="intro-image 4" src={intro4} /></ParallaxLayer>
+                <ParallaxLayer speed={0.6}><img className="intro-image 5" src={intro5} /></ParallaxLayer>
+                <ParallaxLayer speed={1}><img className="intro-image 6" src={intro6} /></ParallaxLayer>
+                <ParallaxLayer speed={2}><img className="intro-image 7" src={intro7} /></ParallaxLayer>
+                <ParallaxLayer speed={1.5}><img className="intro-image 8" src={intro8} /></ParallaxLayer>
               </Parallax>
               {/*<div className="intro-wrapper">*/}
               {/*  <h1>The Song of the Wandering Aengus</h1>*/}
