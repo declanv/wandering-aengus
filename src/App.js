@@ -63,7 +63,10 @@ class Poem extends React.Component {
     let images = [];
     for (var i = 1; i < this.imageNumber+1; i++) {
       let topImage = this.state.shownImage === i ? 'top-image' : '';
-      images.push(<img key={i} className={`image image-${i} ${topImage}`} src={`/img/${i}.jpg`}/>
+      images.push(
+          <div className={`image-container image-${i} ${topImage}`}>
+            <img key={i} className={`image`} src={`/img/${i}.jpg`}/>
+          </div>
       );
     }
 
@@ -99,7 +102,7 @@ class Poem extends React.Component {
             <h4 className="line">{shownLine}</h4>
           </div>
         </div>
-        <div className="image-container">
+        <div className="images-container">
           <div className="image-wrapper">
             {images}
           </div>
